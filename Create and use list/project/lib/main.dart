@@ -19,6 +19,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(  
           title: const Text(title),
+          centerTitle: true,
         ),
       ),
     );
