@@ -30,12 +30,19 @@ class MyApp extends StatelessWidget {
                 color: Colors.red,
               ),
               Container(
+                padding: const EdgeInsets.all(20),
                 width: 200,
                 color: Colors.blue,
+                child: const Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text("just testing is it wokring or not")
+                  ],
+                ),
               ),
               Container(
                 width: 200,
-                color: Colors.yellow,
+                color: const Color.fromARGB(255, 105, 64, 44),
               ),
             ],
           ),
