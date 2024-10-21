@@ -20,6 +20,12 @@ class MyApp extends StatelessWidget {
         appBar:  AppBar(
           title: const Text(title),
         ),
+        body: GridView.count(crossAxisCount: 3,
+        children: List.generate(100, (index) {
+          return Center(
+            child: Text("Item ${index}"),
+          );
+        })),
       ),
     );
   }
