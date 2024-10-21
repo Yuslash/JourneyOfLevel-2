@@ -23,7 +23,8 @@ class MyApp extends StatelessWidget {
         body: GridView.count(crossAxisCount: 3,
         children: List.generate(100, (index) {
           return Center(
-            child: Text("Item ${index}"),
+            child: Text("Item $index",
+            style: Theme.of(context).textTheme.headlineSmall,),
           );
         })),
       ),
