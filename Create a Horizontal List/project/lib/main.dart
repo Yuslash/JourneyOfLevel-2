@@ -12,10 +12,33 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) 
   {
-    return const MaterialApp(
+      const title = "Horizontal Scrolling";
+    return MaterialApp(
+      title: title,
       home: Scaffold(
-        body: Center(
-          child: Text("Hiii Solderrs"),
+        appBar: AppBar(
+          title: const Text(title),
+        ),
+        body: Container(
+          margin: const EdgeInsets.symmetric(vertical: 20),
+          height: 200,
+          child: ListView(
+            scrollDirection: Axis.horizontal,
+            children: <Widget>[
+              Container(
+                width: 200,
+                color: Colors.red,
+              ),
+              Container(
+                width: 200,
+                color: Colors.blue,
+              ),
+              Container(
+                width: 200,
+                color: Colors.yellow,
+              ),
+            ],
+          ),
         ),
       ),
     );
