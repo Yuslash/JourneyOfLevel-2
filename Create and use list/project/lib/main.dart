@@ -17,9 +17,13 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: title,
       home: Scaffold(
-        appBar: AppBar(  
-          title: const Text(title),
-          centerTitle: true,
+        appBar: AppBar(
+          title: const Row(
+            children: [
+              Spacer(),
+              Text(title)
+            ],
+          ),            
         ),
       ),
     );
