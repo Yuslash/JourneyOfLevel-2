@@ -10,10 +10,15 @@ class MyApp extends StatelessWidget {
 
   @override 
   Widget build(BuildContext context) {
-    return const MaterialApp(
+
+    const title = "Basic List";
+    
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: title,
       home: Scaffold(
-        body: Center(
-          child: Text("Hello World!..."),
+        appBar: AppBar(  
+          title: const Text(title),
         ),
       ),
     );
