@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
   {
       const title = "Horizontal Scrolling";
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: title,
       home: Scaffold(
         appBar: AppBar(
@@ -36,13 +37,22 @@ class MyApp extends StatelessWidget {
                 child: const Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Text("just testing is it wokring or not")
+                    Text("just testing is it wokring or not",
+                    style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold  ),)
                   ],
                 ),
               ),
               Container(
                 width: 200,
                 color: const Color.fromARGB(255, 105, 64, 44),
+              ),
+              Container(
+                width: 200,
+                color: const Color.fromARGB(255, 64, 209, 59),
+              ),
+              Container(
+                width: 200,
+                color: const Color.fromARGB(255, 117, 59, 209),
               ),
             ],
           ),
