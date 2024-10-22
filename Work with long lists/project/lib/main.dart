@@ -22,7 +22,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
           appBar: AppBar(
-            title: const Text(title),
+            title: const Text(title, style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),),
+            backgroundColor: Colors.green,
           ),
           body: ListView.builder(
             itemCount: items.length,
