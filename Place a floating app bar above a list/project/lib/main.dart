@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     
-    const title = "Floating App Bar";
+    const title = "Floating App Bar!";
 
     return MaterialApp(
 
@@ -20,13 +20,26 @@ class MyApp extends StatelessWidget {
 
       title: title,
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text(title),
-          backgroundColor: Colors.cyan,
-        ),
-        body: const Center(
-          child: Text("How are you my friend"),
-        ),
+        backgroundColor: const Color.fromARGB(255, 255, 222, 123),
+        body: CustomScrollView(
+          slivers: [
+             const SliverAppBar(
+              title: Text(title, style: TextStyle(color: Colors.white),),
+              centerTitle: true,
+              floating: true,
+              flexibleSpace: Image(image: AssetImage('images/nice.jpeg'),fit: BoxFit.cover,),
+              expandedHeight: 200,
+            ),
+            SliverList(
+              delegate: SliverChildBuilderDelegate(
+                (context, index) => ListTile(
+                      title: Text('Item $index'),
+                    ),
+                childCount: 100
+              ),
+            ),
+          ],
+        )
       ),
     );
   }
