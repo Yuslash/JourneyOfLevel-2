@@ -47,17 +47,106 @@ class MyApp extends StatelessWidget {
             body: const TabBarView(
               children: [
                 Center(
-                  child: SizedBox(
-                    width: 100,
-                    height: 100,
-                    child: DecoratedBox(decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.all(Radius.circular(15)),),),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                    Padding(padding: EdgeInsets.only(bottom: 20),
+                      child: SizedBox(
+                          width: 100,
+                          height: 100,
+                          child: DecoratedBox(
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(15),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                       SizedBox(
+                        width: 100,
+                        height: 100,
+                        child: DecoratedBox(decoration: 
+                        BoxDecoration(color: Colors.green, 
+                        borderRadius: 
+                        BorderRadius.all(Radius.circular(15),
+                            ),
+                          ),
+                        ),
+                       ),
+                    ],
                   ),
                 ),
-                Center(child: SizedBox(width: 100, height: 100, child: DecoratedBox(decoration: BoxDecoration(color: Colors.amber, borderRadius: BorderRadius.all(Radius.circular(15),),),),),),
-                Center(child: SizedBox(width: 100,height: 100, child: DecoratedBox(decoration: BoxDecoration(color: Colors.cyan, borderRadius: BorderRadius.all(Radius.circular(15),),),),),)
-              ],
-            )),
+                Center(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Padding(padding: EdgeInsets.only(bottom: 20),
+                        child: SizedBox(
+                          width: 100,
+                          height: 100,
+                          child: DecoratedBox(decoration: 
+                          BoxDecoration(
+                            color: Colors.orange, 
+                            borderRadius: 
+                            BorderRadius.all(Radius.circular(15),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 100,
+                        height: 100,
+                        child: DecoratedBox(decoration: 
+                        BoxDecoration(
+                          color: Colors.lime,
+                          borderRadius: 
+                          BorderRadius.all(
+                            Radius.circular(15),
+                          ),
+                        ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Center(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Padding(padding: EdgeInsets.only(bottom: 20),
+                        child: SizedBox(
+                          width: 100,
+                          height: 100,
+                          child: DecoratedBox(decoration: 
+                          BoxDecoration(color: Colors.red, 
+                          borderRadius: 
+                          BorderRadius.all(Radius.circular(15),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 100,
+                        height: 100,
+                        child: DecoratedBox(decoration: 
+                        BoxDecoration(color: Colors.blue, 
+                        borderRadius: 
+                        BorderRadius.all(Radius.circular(15),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ) ,
+                ),
+          ],
+        ),
       ),
-    );
-  }
+    ),
+  );
+}
 }
