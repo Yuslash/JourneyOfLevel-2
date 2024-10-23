@@ -13,30 +13,59 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-
       debugShowCheckedModeBanner: false,
-
       home: DefaultTabController(
         length: 3,
         child: Scaffold(
-          backgroundColor: darkBlue,
-          appBar: AppBar(
-            backgroundColor: appBar ,
-            bottom: const TabBar(
-              tabs: [
-                Tab(icon: Icon(Icons.directions_car, color: Colors.white,)),
-                Tab(icon: Icon(Icons.directions_transit, color: Colors.white,)),
-                Tab(icon: Icon(Icons.directions_bike, color: Colors.white,)),
-              ],
+            backgroundColor: darkBlue,
+            appBar: AppBar(
+              backgroundColor: appBar,
+              bottom: const TabBar(
+                tabs: [
+                  Tab(
+                      icon: Icon(
+                    Icons.directions_car,
+                    color: Colors.white,
+                  )),
+                  Tab(
+                      icon: Icon(
+                    Icons.directions_transit,
+                    color: Colors.white,
+                  )),
+                  Tab(
+                      icon: Icon(
+                    Icons.directions_bike,
+                    color: Colors.white,
+                  )),
+                ],
+              ),
+              title: const Text(
+                "Tabs Demo",
+                style: TextStyle(color: Colors.white),
+              ),
             ),
-            title: const Text("Tabs Demo", style: TextStyle(color: Colors.white),),
-          ),
-          body: const TabBarView(children: [
-            Icon(Icons.directions_car, color: Colors.white),
-            Icon(Icons.directions_transit, color: Colors.white,),
-            Icon(Icons.directions_bike ,color: Colors.white,),
-          ]),
-        ),
+            body: const TabBarView(
+              children: [
+                Center(
+                  child: Text(
+                    "This is Car Page",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+                Center(
+                  child: Text(
+                    "This is Train Page",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+                Center(
+                  child: Text(
+                    "This is Bike Page",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+              ],
+            )),
       ),
     );
   }
