@@ -4,6 +4,21 @@ void main() {
   runApp(const MyApp());
 }
 
+class ParallaxRecipe extends StatelessWidget {
+  
+  const ParallaxRecipe({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const SingleChildScrollView(
+      child: Column(
+        children: [],
+      ),
+    );
+  }
+
+}
+
 class MyApp extends StatelessWidget{
   const MyApp({super.key});
 
@@ -21,3 +36,4 @@ class MyApp extends StatelessWidget{
   }
 
 }
+
