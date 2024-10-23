@@ -47,23 +47,14 @@ class MyApp extends StatelessWidget {
             body: const TabBarView(
               children: [
                 Center(
-                  child: Text(
-                    "This is Car Page",
-                    style: TextStyle(color: Colors.white),
+                  child: SizedBox(
+                    width: 100,
+                    height: 100,
+                    child: DecoratedBox(decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.all(Radius.circular(15)),),),
                   ),
                 ),
-                Center(
-                  child: Text(
-                    "This is Train Page",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                ),
-                Center(
-                  child: Text(
-                    "This is Bike Page",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                ),
+                Center(child: SizedBox(width: 100, height: 100, child: DecoratedBox(decoration: BoxDecoration(color: Colors.amber, borderRadius: BorderRadius.all(Radius.circular(15),),),),),),
+                Center(child: SizedBox(width: 100,height: 100, child: DecoratedBox(decoration: BoxDecoration(color: Colors.cyan, borderRadius: BorderRadius.all(Radius.circular(15),),),),),)
               ],
             )),
       ),
