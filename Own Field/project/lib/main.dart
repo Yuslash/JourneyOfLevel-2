@@ -105,8 +105,22 @@ class MyApp extends StatelessWidget {
                           borderRadius: 
                           BorderRadius.all(
                             Radius.circular(15),
+                            ),
                           ),
                         ),
+                      ),
+                      SizedBox(height: 20,),
+
+                      SizedBox(
+                        width: 200,
+                        height: 200,
+                        child: 
+                        DecoratedBox(decoration: 
+                        BoxDecoration(
+                          color: Colors.lightGreen,
+                          borderRadius: BorderRadius.all(Radius.circular(15),
+                            ),
+                          ),
                         ),
                       ),
                     ],
