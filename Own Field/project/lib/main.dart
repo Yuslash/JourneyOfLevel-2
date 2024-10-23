@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+const Color darkBlue = Color.fromARGB(255, 25, 12, 34);
+const Color appBar = Color.fromARGB(255, 161, 29, 255);
+
 void main() {
   runApp(const MyApp());
 }
@@ -16,20 +19,22 @@ class MyApp extends StatelessWidget {
       home: DefaultTabController(
         length: 3,
         child: Scaffold(
+          backgroundColor: darkBlue,
           appBar: AppBar(
+            backgroundColor: appBar ,
             bottom: const TabBar(
               tabs: [
-                Tab(icon: Icon(Icons.directions_car)),
-                Tab(icon: Icon(Icons.directions_transit)),
-                Tab(icon: Icon(Icons.directions_bike)),
+                Tab(icon: Icon(Icons.directions_car, color: Colors.white,)),
+                Tab(icon: Icon(Icons.directions_transit, color: Colors.white,)),
+                Tab(icon: Icon(Icons.directions_bike, color: Colors.white,)),
               ],
             ),
-            title: const Text("Tabs Demo"),
+            title: const Text("Tabs Demo", style: TextStyle(color: Colors.white),),
           ),
           body: const TabBarView(children: [
-            Icon(Icons.directions_car),
-            Icon(Icons.directions_transit),
-            Icon(Icons.directions_bike),
+            Icon(Icons.directions_car, color: Colors.white),
+            Icon(Icons.directions_transit, color: Colors.white,),
+            Icon(Icons.directions_bike ,color: Colors.white,),
           ]),
         ),
       ),
