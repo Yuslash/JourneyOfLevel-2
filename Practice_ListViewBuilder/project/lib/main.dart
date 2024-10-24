@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -36,7 +38,14 @@ class HomeScreen extends StatelessWidget {
             }, child: const Text("Open Rouet!"),
             ),
             const SizedBox(height: 20),
-            const Text("Press the Above Button👆")
+            const Text("Press the Above Button👆"),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const LoginPage()),);
+              },
+              child: const Text("To Login Page"),
+            )
           ],
         ),
       ),
@@ -72,4 +81,37 @@ class DetailScreen extends StatelessWidget {
     );
   }
 
+}
+
+class LoginPage extends StatelessWidget {
+  const LoginPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        body: Center(
+          child: Column(        
+          mainAxisSize: MainAxisSize.min,
+          children: [
+             Padding(padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: TextFormField(
+              decoration:  const InputDecoration(labelText: "Email"),
+              ),
+            ),
+            const SizedBox(height: 20),
+            Padding(padding: const EdgeInsets.symmetric(horizontal: 20),
+               child:  ElevatedButton(
+                  onPressed: () {},
+                  child: const Text("Go HomeScreen"),
+                ),
+              ),
+         
+          ],
+        ),
+        ),
+      ),
+    );
+  }
 }
