@@ -12,6 +12,7 @@ class _HomePageState extends State<HomePage> {
 
   String myText = "Hello wolrd";
   int _count = 0;
+  Color _backgroundColor =  Colors.white;
 
   void changeText() {
     setState(() {
@@ -22,12 +23,14 @@ class _HomePageState extends State<HomePage> {
   void increase() {
     setState(() {
       _count++;
+      _backgroundColor = _count < 5 ? Colors.amber : Colors.lime;
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: _backgroundColor,
       body: Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -37,6 +40,7 @@ class _HomePageState extends State<HomePage> {
             const SizedBox(height: 20),
             ElevatedButton(onPressed: (){
               increase();
+              changeText();
             }, child: const Text("increase"))
           ],
         ),
