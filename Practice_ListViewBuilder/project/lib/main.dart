@@ -91,6 +91,10 @@ class LoginPage extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        appBar: AppBar(
+          title: const Text("Login Page", style: TextStyle(color: Colors.amberAccent),),
+          backgroundColor: Colors.purple,
+        ),
         body: Center(
           child: Column(        
           mainAxisSize: MainAxisSize.min,
@@ -120,7 +124,9 @@ class LoginPage extends StatelessWidget {
             const SizedBox(height: 20),
             Padding(padding: const EdgeInsets.symmetric(horizontal: 20),
                child:  ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
                   child: const Text("Go HomeScreen"),
                 ),
               ),
