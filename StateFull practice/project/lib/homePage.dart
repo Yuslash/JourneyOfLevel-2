@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -11,13 +10,19 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
 
-  String sampleText = "hello wolrd to the state";
+  String myText = "Hello wolrd";
+  int _count = 0;
 
   void changeText() {
     setState(() {
-      sampleText = "how are you State";
+      myText = "hello solider";
     });
+  }
 
+  void increase() {
+    setState(() {
+      _count++;
+    });
   }
 
   @override
@@ -27,18 +32,15 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-            Text(sampleText),
+            Text(myText),
+            Text('$_count'),
             const SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: (){
-                changeText();
-              },
-              child: const Text("click to change"),
-            )
+            ElevatedButton(onPressed: (){
+              increase();
+            }, child: const Text("increase"))
           ],
         ),
       ),
     );
   }
-
 }
