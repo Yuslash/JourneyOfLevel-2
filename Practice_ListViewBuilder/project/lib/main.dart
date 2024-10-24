@@ -112,7 +112,7 @@ class LoginPage extends StatelessWidget {
               width: double.infinity,
               child:  Padding(padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: ElevatedButton(onPressed: (){
-                  //here will be the login function will come
+                  debugPrint("Login Sucessfully!");
                 }, child: const Text('Login')), 
               ),
             ),
