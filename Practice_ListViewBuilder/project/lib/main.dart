@@ -100,6 +100,23 @@ class LoginPage extends StatelessWidget {
               decoration:  const InputDecoration(labelText: "Email"),
               ),
             ),
+            const SizedBox(height: 20,),
+            Padding(padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: TextFormField(
+                decoration: const InputDecoration(labelText: "Password"),
+              ),
+            ),
+            
+            Container(
+              margin: const EdgeInsets.only(top: 20),
+              width: double.infinity,
+              child:  Padding(padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: ElevatedButton(onPressed: (){
+                  //here will be the login function will come
+                }, child: const Text('Login')), 
+              ),
+            ),
+
             const SizedBox(height: 20),
             Padding(padding: const EdgeInsets.symmetric(horizontal: 20),
                child:  ElevatedButton(
