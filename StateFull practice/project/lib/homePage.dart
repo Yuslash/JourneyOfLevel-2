@@ -15,7 +15,7 @@ class _HomePageState extends State<HomePage> {
   Color _backgroundColor =  Colors.white;
 
   void changeText() {
-    setState(() {
+    setState(() { 
       myText = "hello solider";
     });
   }
