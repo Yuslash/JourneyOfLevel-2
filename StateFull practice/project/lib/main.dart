@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:project/statePrac.dart';
-import 'homePage.dart';
-
+import 'package:project/hostarApp.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -13,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: StatePrac(),
+      home: HotstarApp(),
     );
   }
 }
