@@ -1,4 +1,8 @@
+import 'dart:collection';
+
 import 'package:flutter/material.dart';
+import 'package:project/bodyRow.dart';
+import 'package:project/heroPage.dart';
 
 class HotstarApp extends StatefulWidget {
   const HotstarApp({super.key});
@@ -20,7 +24,7 @@ class _HotstarAppState extends State<HotstarApp> {
         title: Container(
           // color: Colors.red,
           width: double.infinity,
-          height: 120,
+          height: 100,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             mainAxisSize: MainAxisSize.min,
@@ -40,6 +44,87 @@ class _HotstarAppState extends State<HotstarApp> {
               )
             ],
           ),
+        ),
+      ),
+      body: SingleChildScrollView(
+        child: Container(
+          width: double.infinity,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      Padding(padding: const EdgeInsets.symmetric(horizontal: 20),
+                        child: Row(
+                          children: [
+                            Container(
+                            width: 380,
+                            height: 240,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(15),
+                              child: Image.asset(
+                                'images/marvel.jpeg',
+                                width: double.infinity,
+                                height: double.infinity,
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ),
+                          const SizedBox(width: 20),
+                          SizedBox(
+                            width: 380,
+                            height: 240,
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(15),
+                              child: Image.asset(
+                                'images/marvel.jpeg',
+                                width: double.infinity,
+                                height: double.infinity,
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ),
+                          const SizedBox(width: 20),
+                          SizedBox(
+                            width: 380,
+                            height: 240,
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(15),
+                              child: FittedBox(
+                                  fit: BoxFit.cover,
+                                  child: Image.asset(
+                                    'images/marvel.jpeg',
+                                  )),
+                            ),
+                          ),
+                          ],
+                        ),
+                      ),
+                      
+                      
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 20),
+                Container(
+                  child: Padding(padding: EdgeInsets.symmetric(horizontal: 20),
+                    child: Column(
+                      children: [
+                        SizedBox(height: 20),
+                        BodyRow(),
+                      ],
+                    ),
+                  ),
+                )
+              ],
+            ),
+          
         ),
       ),
     );
