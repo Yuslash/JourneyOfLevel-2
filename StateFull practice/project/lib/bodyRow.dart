@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 
 class BodyRow extends StatefulWidget {
   
-  const BodyRow({super.key});
+  const BodyRow({super.key, required this.title});
+
+  final String title;
 
   _BodyRowState createState() => _BodyRowState();
 }
@@ -17,7 +19,7 @@ class _BodyRowState extends State<BodyRow> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         mainAxisSize: MainAxisSize.max,
         children: [
-          const Text("Continue Watching", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),),
+          Text(widget.title, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),),
           IconButton(onPressed: (){
             print("See More Clicked");
           }, icon: const Icon(Icons.chevron_right),)

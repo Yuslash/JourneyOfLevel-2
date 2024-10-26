@@ -2,7 +2,9 @@ import 'dart:collection';
 
 import 'package:flutter/material.dart';
 import 'package:project/bodyRow.dart';
+import 'package:project/continueWatch.dart';
 import 'package:project/heroPage.dart';
+import 'package:project/newAction.dart';
 
 class HotstarApp extends StatefulWidget {
   const HotstarApp({super.key});
@@ -70,8 +72,7 @@ class _HotstarAppState extends State<HotstarApp> {
                               borderRadius: BorderRadius.circular(15),
                               child: Image.asset(
                                 'images/marvel.jpeg',
-                                width: double.infinity,
-                                height: double.infinity,
+                                
                                 fit: BoxFit.cover,
                               ),
                             ),
@@ -84,8 +85,7 @@ class _HotstarAppState extends State<HotstarApp> {
                               borderRadius: BorderRadius.circular(15),
                               child: Image.asset(
                                 'images/marvel.jpeg',
-                                width: double.infinity,
-                                height: double.infinity,
+                                
                                 fit: BoxFit.cover,
                               ),
                             ),
@@ -113,15 +113,85 @@ class _HotstarAppState extends State<HotstarApp> {
                 ),
                 const SizedBox(height: 20),
                 Container(
-                  child: Padding(padding: EdgeInsets.symmetric(horizontal: 20),
+                  child: const  Padding(padding:  EdgeInsets.symmetric(horizontal: 20),
                     child: Column(
                       children: [
-                        SizedBox(height: 20),
-                        BodyRow(),
+                         BodyRow(title: "Continue Watching",),
+                         SingleChildScrollView(
+                          scrollDirection: Axis.horizontal,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            mainAxisSize: MainAxisSize.max,
+                            children: [
+                              ContinueWatch(image: 'images/marvel.jpeg'),
+                              SizedBox(width: 10),
+                              ContinueWatch(image: 'images/marvel.jpeg'),
+                              SizedBox(width: 10),
+                              ContinueWatch(image: 'images/marvel.jpeg'),
+                              SizedBox(width: 10),
+                              ContinueWatch(image: 'images/marvel.jpeg'),
+                            ],
+                          ),
+                        ),
+                        SizedBox(height: 10),
+                        BodyRow(title: "Most Featured"),
+                        SingleChildScrollView(
+                          scrollDirection: Axis.horizontal,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              ContinueWatch(image: "images/marvel.jpeg"),
+                              SizedBox(width: 10),
+                              ContinueWatch(image: "images/marvel.jpeg"),
+                              SizedBox(width: 10),
+                              ContinueWatch(image: "images/marvel.jpeg"),
+                              SizedBox(width: 10),
+                            ],
+                          ),
+                        ),
+                        SizedBox(height: 10),
+                        BodyRow(title: "New Action"),
+                        SingleChildScrollView(
+                          scrollDirection: Axis.horizontal,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            mainAxisSize: MainAxisSize.max,
+                            children: [
+                              NewAction(image: "images/marvel.jpeg"),
+                              SizedBox(width: 10,),
+                              NewAction(image: "images/marvel.jpeg"),
+                              SizedBox(width: 10,),
+                              NewAction(image: "images/marvel.jpeg"),
+                              SizedBox(width: 10,),
+                              NewAction(image: "images/marvel.jpeg"),
+                              SizedBox(width: 10,),
+                            ],
+                          ),
+                        ),
+                        SizedBox(height: 10),
+                        BodyRow(title: "Sci-Fi Movies"),
+                        SingleChildScrollView(
+                          scrollDirection: Axis.horizontal,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            mainAxisSize: MainAxisSize.max,
+                            children: [
+                              NewAction(image: "images/marvel.jpeg"),
+                              SizedBox(width: 10,),
+                              NewAction(image: "images/marvel.jpeg"),
+                              SizedBox(width: 10,),
+                              NewAction(image: "images/marvel.jpeg"),
+                              SizedBox(width: 10,),
+                              NewAction(image: "images/marvel.jpeg"),
+                              SizedBox(width: 10,),
+                            ],
+                          ),
+                        ),
                       ],
                     ),
                   ),
-                )
+                ),                
               ],
             ),
           
