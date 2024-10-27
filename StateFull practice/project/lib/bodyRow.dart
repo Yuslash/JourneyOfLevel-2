@@ -19,10 +19,10 @@ class _BodyRowState extends State<BodyRow> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         mainAxisSize: MainAxisSize.max,
         children: [
-          Text(widget.title, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),),
+          Text(widget.title, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: Colors.white),),
           IconButton(onPressed: (){
-            print("See More Clicked");
-          }, icon: const Icon(Icons.chevron_right),)
+            print("See More Clicked",);
+          }, icon: const Icon(Icons.chevron_right, color: Colors.purple,),)
         ],
       ),
     );

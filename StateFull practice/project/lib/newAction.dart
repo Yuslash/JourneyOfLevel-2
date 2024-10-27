@@ -20,7 +20,7 @@ class _NewActionState extends State<NewAction> {
       width: 120,
       height: 180,
       child: ClipRRect(
-        borderRadius: BorderRadius.circular(15),
+        borderRadius: BorderRadius.circular(8),
         child: Image.asset(widget.image, fit: BoxFit.cover,),
       ),
     );

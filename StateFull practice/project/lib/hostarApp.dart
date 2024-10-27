@@ -5,6 +5,7 @@ import 'package:project/bodyRow.dart';
 import 'package:project/continueWatch.dart';
 import 'package:project/heroPage.dart';
 import 'package:project/newAction.dart';
+import 'package:project/searchPage.dart';
 
 class HotstarApp extends StatefulWidget {
   const HotstarApp({super.key});
@@ -19,9 +20,10 @@ class _HotstarAppState extends State<HotstarApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFAEB0B7),
+      backgroundColor: const Color.fromARGB(255, 0, 6, 40),
       appBar: AppBar(
-        backgroundColor: const Color(0xFFAEB0B7),
+        // backgroundColor: const Color(0xFFAEB0B7),
+        backgroundColor: const Color.fromARGB(255, 0, 6, 40),
         toolbarHeight: 100,
         title: Container(
           // color: Colors.red,
@@ -37,11 +39,11 @@ class _HotstarAppState extends State<HotstarApp> {
                   Padding(padding: const  EdgeInsets.only(left: 10),
                     child: IconButton(onPressed: (){
                       debugPrint("Cast button clicked!");
-                    }, icon: const Icon(Icons.cast)),
+                    }, icon: const Icon(Icons.cast, color: Colors.white,)),
                   ),
                   IconButton(onPressed: (){
                     debugPrint("Search Button Clicked!");
-                  }, icon: const Icon(Icons.search),)
+                  }, icon: const Icon(Icons.search, color: Colors.white,),)
                 ],
               )
             ],
@@ -65,13 +67,10 @@ class _HotstarAppState extends State<HotstarApp> {
                             Container(
                             width: 380,
                             height: 240,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(15),
-                            ),
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(15),
                               child: Image.asset(
-                                'images/marvel.jpeg',
+                                'images/al.jpeg',
                                 
                                 fit: BoxFit.cover,
                               ),
@@ -99,7 +98,7 @@ class _HotstarAppState extends State<HotstarApp> {
                               child: FittedBox(
                                   fit: BoxFit.cover,
                                   child: Image.asset(
-                                    'images/marvel.jpeg',
+                                    'images/fr.jpeg',
                                   )),
                             ),
                           ),
@@ -125,11 +124,11 @@ class _HotstarAppState extends State<HotstarApp> {
                             children: [
                               ContinueWatch(image: 'images/marvel.jpeg'),
                               SizedBox(width: 10),
-                              ContinueWatch(image: 'images/marvel.jpeg'),
+                              ContinueWatch(image: 'images/al.jpeg'),
                               SizedBox(width: 10),
                               ContinueWatch(image: 'images/marvel.jpeg'),
                               SizedBox(width: 10),
-                              ContinueWatch(image: 'images/marvel.jpeg'),
+                              ContinueWatch(image: 'images/fr.jpeg'),
                             ],
                           ),
                         ),
@@ -141,11 +140,11 @@ class _HotstarAppState extends State<HotstarApp> {
                             mainAxisAlignment: MainAxisAlignment.start,
                             mainAxisSize: MainAxisSize.min,
                             children: [
-                              ContinueWatch(image: "images/marvel.jpeg"),
+                              ContinueWatch(image: "images/al.jpeg"),
                               SizedBox(width: 10),
                               ContinueWatch(image: "images/marvel.jpeg"),
                               SizedBox(width: 10),
-                              ContinueWatch(image: "images/marvel.jpeg"),
+                              ContinueWatch(image: "images/fr.jpeg"),
                               SizedBox(width: 10),
                             ],
                           ),
@@ -158,9 +157,9 @@ class _HotstarAppState extends State<HotstarApp> {
                             mainAxisAlignment: MainAxisAlignment.start,
                             mainAxisSize: MainAxisSize.max,
                             children: [
-                              NewAction(image: "images/marvel.jpeg"),
+                              NewAction(image: "images/fr.jpeg"),
                               SizedBox(width: 10,),
-                              NewAction(image: "images/marvel.jpeg"),
+                              NewAction(image: "images/al.jpeg"),
                               SizedBox(width: 10,),
                               NewAction(image: "images/marvel.jpeg"),
                               SizedBox(width: 10,),
@@ -179,9 +178,9 @@ class _HotstarAppState extends State<HotstarApp> {
                             children: [
                               NewAction(image: "images/marvel.jpeg"),
                               SizedBox(width: 10,),
-                              NewAction(image: "images/marvel.jpeg"),
+                              NewAction(image: "images/fr.jpeg"),
                               SizedBox(width: 10,),
-                              NewAction(image: "images/marvel.jpeg"),
+                              NewAction(image: "images/al.jpeg"),
                               SizedBox(width: 10,),
                               NewAction(image: "images/marvel.jpeg"),
                               SizedBox(width: 10,),
@@ -196,6 +195,22 @@ class _HotstarAppState extends State<HotstarApp> {
             ),
           
         ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: const Color.fromARGB(255, 0, 15, 69),
+        selectedItemColor: const Color.fromARGB(255, 25, 72, 214),
+        unselectedItemColor: Colors.grey,
+        onTap: (index) {
+        if (index == 1) {
+          Navigator.push(context, MaterialPageRoute(builder: (context) => const SearchPage(),
+            ),
+          );
+        } 
+      }, 
+      items: const [
+        BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+        BottomNavigationBarItem(icon: Icon(Icons.search, color: Colors.grey,), label: "Search")
+      ],
       ),
     );
   }

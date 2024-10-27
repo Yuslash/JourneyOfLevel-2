@@ -21,7 +21,7 @@ class _ContinueWatchState extends State<ContinueWatch> {
       width: 160,
       height: 100,
       child: ClipRRect(
-        borderRadius: BorderRadius.circular(15),
+        borderRadius: BorderRadius.circular(8),
         child: Image.asset(
           widget.image, fit: BoxFit.cover,),
       ),
