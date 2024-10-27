@@ -10,8 +10,8 @@ class SearchPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Search Page"),
       ),
-      body: Center(
-        child: const Text("this is search page", style: TextStyle(color: Colors.white),),
+      body: const Center(
+        child:  Text("this is search page", style: TextStyle(color: Colors.white),),
       ),
     );
   }

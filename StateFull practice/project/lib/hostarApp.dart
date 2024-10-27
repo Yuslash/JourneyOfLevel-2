@@ -6,6 +6,7 @@ import 'package:project/continueWatch.dart';
 import 'package:project/heroPage.dart';
 import 'package:project/newAction.dart';
 import 'package:project/searchPage.dart';
+import 'package:project/torachApp.dart';
 
 class HotstarApp extends StatefulWidget {
   const HotstarApp({super.key});
@@ -205,11 +206,15 @@ class _HotstarAppState extends State<HotstarApp> {
           Navigator.push(context, MaterialPageRoute(builder: (context) => const SearchPage(),
             ),
           );
+        } else if(index == 2) {
+          Navigator.push(context, MaterialPageRoute(builder: (context) => const TorchApp(),),);
         } 
+        
       }, 
       items: const [
         BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-        BottomNavigationBarItem(icon: Icon(Icons.search, color: Colors.grey,), label: "Search")
+        BottomNavigationBarItem(icon: Icon(Icons.search, color: Colors.grey,), label: "Search"),
+        BottomNavigationBarItem(icon: Icon(Icons.flash_auto, color: Colors.grey,), label: "Torch"),
       ],
       ),
     );
